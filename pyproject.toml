@@ -1,0 +1,19 @@
+[project]
+name = "api-course-marimo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Karsten Pruehss", email = "karsten.pruehss@tabcorp.com.au" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "marimo>=0.24.0",
+]
+
+[project.scripts]
+api-course-marimo = "api_course_marimo:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
