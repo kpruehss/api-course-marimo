@@ -1,7 +1,8 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
-#     "marimo>=0.24.0",
+#     "marimo>=0.23.3",
+#     "python-dotenv>=1.2.3",
 # ]
 # ///
 
@@ -11,12 +12,12 @@ __generated_with = "0.23.9"
 app = marimo.App()
 
 
-app._unparsable_cell(
-    r"""
-    uv add anthropic
-    """,
-    name="_"
-)
+@app.cell
+def _():
+    from dotenv import load_dotenv
+
+    load_dotenv()
+    return
 
 
 if __name__ == "__main__":
